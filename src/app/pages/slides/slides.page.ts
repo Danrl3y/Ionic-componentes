@@ -11,32 +11,34 @@ export class SlidesPage implements OnInit {
 
   slides: { img: string, titulo: string, desc: string }[] = [
     {
-      img: '/assets/slides/1.jpg',
-      titulo: '1',
-      desc: 'Dog 1'
+      img: '/assets/slides/photos.svg',
+      titulo: 'Comparte Fotos',
+      desc: 'Mira y comparte increíbles fotos de todo el mundo'
     },
     {
-      img: '/assets/slides/2.jpg',
-      titulo: '2',
-      desc: 'Dog 2'
+      img: '/assets/slides/music-player-2.svg',
+      titulo: 'Escucha Música',
+      desc: 'Toda tu música favorita está aquí'
     },
     {
-      img: '/assets/slides/3.webp',
-      titulo: '3',
-      desc: 'Dog 3'
+      img: '/assets/slides/calendar.svg',
+      titulo: 'Nunca olvides nada',
+      desc: 'El mejor calendario del mundo a tu disposición'
     },
     {
-      img: '/assets/slides/4.gif',
-      titulo: '4',
-      desc: 'Dog 4'
-    },
+      img: '/assets/slides/placeholder-1.svg',
+      titulo: 'Tu ubicación',
+      desc: 'Siempre sabremos donde estás!'
+    }
   ];
 
-  constructor(private navCtrl: NavController) { }
+  constructor( private navController: NavController ) { }
 
-  ngOnInit() { }
-
-  onClick() {
-    this.navCtrl.navigateBack('/');
+  ngOnInit() {
   }
+
+  onClick(){
+    this.navController.navigateBack('/');
+  }
+
 }
